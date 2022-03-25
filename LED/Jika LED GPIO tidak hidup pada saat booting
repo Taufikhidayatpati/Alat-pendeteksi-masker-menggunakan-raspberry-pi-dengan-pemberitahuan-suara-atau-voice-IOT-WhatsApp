@@ -1,0 +1,23 @@
+cd logs
+sudo apt-get install python3-gpiozero
+pip3 install RPi.GPIO==0.6.2
+/etc/init.d/gpio_all_off.bash
+/etc/rc.local
+/bin/sh -e
+/etc/init.d/gpio_all_off.bash
+sudo nano /etc/profile
+sudo nano /etc/rc.local
+home/pi/pi-reboot
+on_reboot.sh
+source /home/pi/.profile
+workon cv
+cd /home/pi/pi-reboot
+chmod +x on_reboot.sh
+sudo nano /etc/profile
+sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart
+sudo update-rc.d lightdm enable
+sudo systemctl daemon-reload
+sudo systemctl enable sample.service
+Ctrl+x
+y
+Enter
